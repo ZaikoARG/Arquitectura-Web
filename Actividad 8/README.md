@@ -27,14 +27,6 @@ Este proyecto contiene la resolución de los ejercicios de JavaScript asignados 
 * **HTML5** : Para la estructura del archivo `index.html`.
 * **JavaScript** : Para la lógica de los ejercicios, utilizando funciones nativas como `toUpperCase`, `substring`, `indexOf`, `sort`, `push`, `Math.random`, entre otras.
 
-## Instrucciones de Uso
-
-1. Clona o descarga el repositorio desde GitHub.
-2. Asegúrate de que la carpeta `exercises` contiene los archivos JavaScript (`variables_and_operators.js`, `strings.js`, `arrays.js`, `if_else.js`, `for.js`, `functions.js`) y que está en el mismo directorio que `index.html`.
-3. Abre `index.html` en un navegador web.
-4. Abre la consola del navegador (F12 o clic derecho > Inspeccionar > Consola) para ver los resultados de los ejercicios.
-5. Algunas alertas aparecerán automáticamente para los ejercicios que lo requieren (por ejemplo, 4a, 4b, 5a, 5b, 5c, 6b, 6d, 6e).
-
 ## Requisitos Cumplidos
 
 * **Organización** : Los ejercicios están divididos en archivos JavaScript separados dentro de la carpeta `exercises`.
@@ -46,4 +38,3 @@ Este proyecto contiene la resolución de los ejercicios de JavaScript asignados 
 * **If Else** : Condiciones con números aleatorios y rangos de edad.
 * **For** : Iteración sobre arrays, capitalización, concatenación, llenado de arrays.
 * **Funciones** : Suma, validación de números, validación de enteros, redondeo.
-* **Subida a GitHub** : Los archivos están listos para ser subidos a un repositorio de GitHub.
