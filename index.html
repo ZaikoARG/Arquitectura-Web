@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquitectura Web - Página de Inicio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: #2c3e50;
+            color: #fff;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .activity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .activity-grid button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .activity-grid button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: #2c3e50;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .activity-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .activity-grid button {
+                padding: 0.8rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            header p {
+                font-size: 0.9rem;
+            }
+
+            .activity-grid button {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Arquitectura Web - Actividades</h1>
+        <p>Bienvenido al repositorio de actividades de la asignatura Arquitectura Web de la Universidad de Palermo. Selecciona una actividad para explorarla:</p>
+    </header>
+    <main>
+        <div class="activity-grid">
+            <a href="Actividad 2/index.html"><button>Actividad 2</button></a>
+            <a href="Actividad 2 sin estilos y clases/index.html"><button>Actividad 2 (Sin Estilos y Clases)</button></a>
+            <a href="Actividad 3/index.html"><button>Actividad 3</button></a>
+            <a href="Actividad 4/index.html"><button>Actividad 4</button></a>
+            <a href="Actividad 5/index.html"><button>Actividad 5</button></a>
+            <a href="Actividad 8/index.html"><button>Actividad 8</button></a>
+            <a href="Actividad 9/index.html"><button>Actividad 9</button></a>
+            <a href="Actividad 10/index.html"><button>Actividad 10</button></a>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 ZaikoARG | Repositorio: <a href="https://github.com/ZaikoARG/Arquitectura-Web">GitHub</a></p>
+    </footer>
+</body>
+</html>
