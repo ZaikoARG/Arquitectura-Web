@@ -1,0 +1,210 @@
+/* Reset general y tipografía */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at center, #0b0c10, #1f2833);
+  color: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 15px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Animación fondo tipo portal */
+body::before {
+  content: '';
+  position: fixed;
+  top: -20%;
+  left: -20%;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle at center, rgba(0, 255, 0, 0.15), transparent 70%);
+  background-size: 200% 200%;
+  border-radius: 50%;
+  animation: portalSpin 20s linear infinite;
+  z-index: -1;
+  filter: blur(80px);
+}
+
+@keyframes portalSpin {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.05); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+/* Títulos */
+h1, h2 {
+  text-align: center;
+  color: #00ff90;
+  text-shadow: 0 0 10px #00ff90;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: 'Get Schwifty', cursive;
+}
+
+/* Subtítulos */
+p {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+/* Contenedor de filtros */
+.filter-container {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Inputs y selects */
+.filter-container input,
+.filter-container select {
+  padding: 10px;
+  border: 2px solid #00ff90;
+  border-radius: 8px;
+  width: 180px;
+  background: #111;
+  color: #00ff90;
+  font-weight: bold;
+}
+
+.filter-container input::placeholder {
+  color: #00ff9070;
+}
+
+/* Botones */
+button {
+  padding: 10px 20px;
+  background-color: #00ff90;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 0 10px #00ff90;
+}
+
+button:hover {
+  background-color: #00cc74;
+}
+
+/* Resultados */
+.characters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+/* Tarjeta de personaje */
+.character-card {
+  background: #141f1f;
+  border: 2px solid #00ff90;
+  border-radius: 12px;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+  transition: transform 0.2s ease;
+  animation: floatCard 4s ease-in-out infinite;
+}
+
+.character-card:hover {
+  transform: scale(1.05);
+}
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.character-card img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #00cc00;
+  margin-bottom: 10px;
+}
+
+.character-card h3 {
+  color: #00ff90;
+  margin-bottom: 5px;
+}
+
+.character-card p {
+  font-size: 0.9rem;
+  margin: 4px 0;
+}
+
+/* Errores */
+.error {
+  color: #ff4d4d;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #00ff90;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .filter-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filter-container input,
+  .filter-container select {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .characters {
+    grid-template-columns: 1fr;
+  }
+}
